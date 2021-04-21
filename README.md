@@ -15,7 +15,8 @@ Simple web application using the Node.js framework, illustrating the client-serv
 
 Open in Browser at [http://localhost:3000/](http://localhost:3000/)
 
-*Enter username 'Liz' prior to submitting new film reviews.*
+*Security implemented via JWT tokens. 
+Enter username 'Liz' prior to submitting new film reviews.*
 
 ## Mobile App
 
