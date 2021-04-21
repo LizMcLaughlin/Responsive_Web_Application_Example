@@ -7,8 +7,10 @@ Simple web application using the Node.js framework, illustrating the client-serv
 ## Web Application
  ```sh
 >> git clone https://github.com/LizMcLaughlin/Responsive_Web_Application_Example
->> 
->> docker-compose up
+>> cd Responsive_Web_Application_Example
+>> cd films; npm install
+>> cd ../web; npm install
+>> cd ..; docker-compose up
 ```
 
 Open in Browser at [http://localhost:3000/](http://localhost:3000/)
