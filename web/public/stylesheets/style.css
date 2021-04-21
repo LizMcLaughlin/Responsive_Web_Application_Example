@@ -1,0 +1,97 @@
+/* Reference for CSS changes to make web UI resonsive:
+https://medium.com/@tjoye20/5-steps-for-responsive-web-design-4bcb58598685 */
+
+/* Extra small devices (phones, 600px and down) 
+@media only screen and (max-width: 600px) {...}
+*/
+
+/* Small devices (portrait tablets and large phones, 600px and up) 
+@media only screen and (min-width: 600px) {...}
+*/
+
+/* Large devices (laptops/desktops, 992px and up) 
+@media only screen and (min-width: 992px) {...}
+*/
+
+/* ensures padding and border widths added to an element are included in the total width for element */
+html {box-sizing: border-box;}*, *:before, *:after {box-sizing: inherit;}
+
+/* Text Prompt - User Instructions
+default to mobile screen size */
+p {color: rgb(240, 226, 179);
+  font-size: 18px;
+  font-variant: small-caps;
+  text-align: center;}
+
+  /* Text Prompt for larger screens 
+  Set font in user prompt to shrink down when the screen reaches 600px or less*/
+  @media only screen and (min-width: 800px) {
+    p {
+      font-size: 188%;
+    }
+  } 
+
+/* For small devices: */
+@media only screen and (max-width: 800px) {
+  p {
+    font-size: 100%;
+  }
+  h1 {
+    font-size: 20px; 
+  }
+  #get-films-button, #reset-form, #submit-button, #login-button {
+    font: 2px;
+  }
+}
+
+ body {
+   padding: 50px;
+   background-color: rgb(94, 96, 96);
+   border-style: inset;
+   border-width: thick;
+  }
+
+/* page header */
+  h1 {font-family: Monoton; 
+    font-size: 70px; 
+    font-style: normal; 
+   font-variant: normal; 
+   font-weight: 500; 
+   line-height: 26.4px; 
+   text-align: center;}
+
+
+  #input {border:double; color: white; text-align: center; font-variant: small-caps;
+    text-align: center; font-size: 25px;
+  }
+
+  #film, #rating, #login {width: 80%;  display: inline-block;
+    border: 1px slateblue #ccc;
+    border-radius: 10px;
+    box-sizing: border-box; text-align: center; border-width: thick;}
+
+  #get-films-button, #reset-form, #submit-button, #login-button { display: block;
+   width: 10%;
+   margin: auto;}
+
+/* display table */
+  table, th,td {border: 1px solid black;
+    border-color: white;
+    margin-left: auto;
+    margin-right: auto;}
+
+    /* maybe change to.... 'display: none;'?? */
+  #mytable {visibility: hidden;} 
+
+  th {text-align: center;
+    padding: 5px;
+    color: rgb(245, 47, 12);
+    font-size: 25px;
+    font-variant: small-caps;
+  }
+
+  td {color: white;
+    font-size: 20px;
+  }
+
+  

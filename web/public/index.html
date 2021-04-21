@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!--Reference for CSS changes to make UI responsive:
+  https://medium.com/@tjoye20/5-steps-for-responsive-web-design-4bcb58598685-->
+
+  <!--External scripts-->
+  <script type = "text/javascript" src = "./films.js"></script>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+  <link rel="stylesheet2" type="text/css" href="//fonts.googleapis.com/css?family=Monoton" /></head>
+
+  <!--Responsive: sets the zoon of my viewport to 1, so my webpage fits the screen of the device accessing
+  it. No need to scroll!-->
+  <meta name=”viewport” content=”width=device-width, initial-scale=1.0">
+  
+<title>Client Web App ~ Assignment #4</title>
+<body>
+  <hr><hr>
+  <h1>Film Ratings</h1>
+  <hr><hr>
+       <p>Welcome!<br><br>Please enter your film titles with their ratings below, one at a time.<br>
+        Hit 'Display Films' when finished to see all films with their ratings.</p>
+        
+        <!--form for user input and buttons to submit/reset/display table-->
+        <div id=input>
+
+          <form name="loginForm" action="" method="GET"> <br>
+            <!--Login Input -->
+            <label for="login" id="login-label">Username:</label><br><br>
+            <input type="text" name="inputbox" value="" id=login><br><br>
+            <button id="login-button" onclick="return API.login()">Log In</button><br>
+          </form>
+
+          <form name="filmSubmit" action="" method="GET"> <br>
+            
+            <!--Film Title Input -->
+            <label for="film">Film Title:</label><br><br>
+            <input type="text" name="inputbox" value="" id=film><br><br>
+            
+            <!--Ratings Input ** Added for Assignment 4 **-->
+            <label for="rating">Enter Numerical Rating (1-5):</label><br><br>
+            <input type="text" name="inputbox" value="" id=rating><br><br>
+            
+            <!--Buttons - Submit/Reset/Display -->
+            <button id="submit-button" onclick="return API.createFilm(this.form)">Add Film</button><br>
+            <button id="submit-button" onclick="return API.updateFilm(this.form)">Update Film</button><br>
+            <button id="get-films-button" onclick="return API.getFilms()">Display Films</button><br>
+            <button id='reset-form'>Log Out</button><br>
+          </form> <br><br><br>   
+
+          <!--Table to display films-->
+          <div id=mytable>            
+            <table id="table">
+            <tr>
+              <th>Film Title</th>
+              <th>Rating (0-5 stars)</th>
+            </tr>   
+            </table><br>
+        </div></div>
+</body>
+</html>
